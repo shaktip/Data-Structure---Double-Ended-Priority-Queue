@@ -1,0 +1,14 @@
+The implementation of DEPQ uses Heap Data Structure, where size of heap is considered to be 100.
+Because getMax, getMin, removeMax, removeMin are required to their best complexities , so this code has maintained 2 Heaps - One is MinHeap and other is MaxHeap. 
+n is number of words in heap at particular instance then :
+The insertKey function inserts a word from a file or given on command line in both the heaps and heapify both of them, which takes O(logn) time.
+Similarly getMax and getMin function displays the 0th index element of MaxHeap and MinHeap - so complexity is O(1)
+removeMax and removeMin - these functions remove the element from heap and heapify the heap, which takes O(logn) time.
+isContains(key) - for checking whether a particular key is available in heap or not, a seperate list is created of 100 elements, and a hash function is implemented to find hash value of key. At the time of inserting a new element the hash value is calculated, and element is inserted in a list at that particular index. And at the time of removing the element, again hashvalue is computed and element is removed from the list. Hence for properly distributed data, the implementation should find key in O(1) time.
+The external QuickSort algorith uses a heap data structure of 100 size - and partitions the array on the basis of heap into 3 files - Left ,Middle, Right and merges them. Because the size of file could be any long, instead of recursive quick sort, it is using iterative quick  sort.  
+ let N be total no of words in the file: then
+     If file is not sorted then External Quick Sort Complexity will be
+        O(NlogN) - where comparision of 2 strings complexity is also added to great extend.
+     If file is sorted, then complexity is O(N^2)
+     _______________________________________________________________________
+          
